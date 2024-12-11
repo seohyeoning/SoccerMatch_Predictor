@@ -32,10 +32,10 @@ An AI-powered web application for predicting soccer match outcomes based on data
 
 ## Screenshots
 ### Home Page
-![Home Page](./image/web_page1.png)
+![Home Page](./image/web_page1.PNG)
 
 ### Prediction Result
-![Prediction Result](./image/web_page2.png)
+![Prediction Result](./image/web_page2.PNG)
 
 ---
 
