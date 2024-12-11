@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VictoryVision</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff4500;
+        }
+        form {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+        }
+        select, button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>VictoryVision</h1>
+    <form action="/predict" method="post">
+        <label for="home_team">Home Team:</label>
+        <select id="home_team" name="home_team">
+            {% for team_name, team_id in team_ids.items() %}
+            <option value="{{ team_id }}">{{ team_name }}</option>
+            {% endfor %}
+        </select>
+        <label for="away_team">Away Team:</label>
+        <select id="away_team" name="away_team">
+            {% for team_name, team_id in team_ids.items() %}
+            <option value="{{ team_id }}">{{ team_name }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
